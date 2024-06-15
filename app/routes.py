@@ -11,7 +11,6 @@ def myinfo():
             cursor = connection.cursor(dictionary=True)
             cursor.execute('SELECT * FROM my_info')
             results = cursor.fetchall()
-            # cursor.close()
             return jsonify(results)
         else:
             return "Failed to connect to the database.", 500
